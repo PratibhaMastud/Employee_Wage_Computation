@@ -1,5 +1,5 @@
 #! /bin/bash
-
+#Uc-9 Store Day,Daily Wage ,Total Wage
 wagePerHour=20
 workingDay=20
 fulldayHour=8
@@ -11,7 +11,7 @@ do
 	wageRespectiveDays=$(($perDayWages*i))
 	totalWages=$(($wageRespectiveDays+$totalWages))
 	a=$(($a+$i))
-	echo "$i-Daily Wage = $wageRespectiveDays   " 
+	echo " Day : $i      Daily Wage = $wageRespectiveDays    Total Wage(a) = $totalWages " 
 done
-	echo "Total Wage is $totalWages"
+	
 
