@@ -1,17 +1,23 @@
 #! /bin/bash
-#Uc-9 Store Day,Daily Wage ,Total Wage
-wagePerHour=20
-workingDay=20
-fulldayHour=8
-totalWages=0
+
 a=0
-for (( i=1; i<=20; i++ ))
+Sum=0
+for (( i=1; i<=6; i++ ))
 do
-	perDayWages=$(($fulldayHour*$wagePerHour))
-	wageRespectiveDays=$(($perDayWages*i))
-	totalWages=$(($wageRespectiveDays+$totalWages))
-	a=$(($a+$i))
-	echo " Day : $i      Daily Wage = $wageRespectiveDays    Total Wage(a) = $totalWages " 
-done
+	roll=$((RANDOM%6+1))
 	
+	for (( j=1; j<=6; j++ ))
+	do
+		
+		a=$(($a+1))
+		Sum=$(($Sum+$roll))
+	
+		if [ $i -eq 6 -a $j -eq 6 ]
+		then
+			echo "The Double 6 Roll Occur."
+			echo "The number of Rolls = $a"
+			echo "Sum of Roll =$Sum"
+		fi
+	done
+done
 
